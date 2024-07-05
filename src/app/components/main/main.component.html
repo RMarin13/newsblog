@@ -1,0 +1,40 @@
+<aside>
+  <h2>añade tu noticia</h2>
+  <div>
+    <label for="title">Introduce el titulo</label>
+    <input
+      id="title"
+      type="text"
+      placeholder="Título"
+      required
+      [(ngModel)]="newNews.title"
+    />
+  </div>
+  <div>
+    <label for="date">Introduce la fecha</label>
+    <input id="date" type="date" required [(ngModel)]="newNews.date" />
+  </div>
+  <div>
+    <label for="image">Introduce la url de la imagen</label>
+    <input
+      id="image"
+      type="text"
+      placeholder="URL de la imagen"
+      required
+      [(ngModel)]="newNews.image"
+    />
+  </div>
+  <div>
+    <label for="content">Introduce el texto</label>
+    <textarea
+      id="content"
+      type="text"
+      rows="10"
+      cols="40"
+      placeholder="Aquí el texto de tu noticia"
+      required
+      [(ngModel)]="newNews.content"
+    ></textarea>
+  </div>
+  <button (click)="saveNews()">Carga tu noticia</button>
+</aside>
