@@ -1,0 +1,8 @@
+#news-wrapper {
+  width: 95%;
+  margin: auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
