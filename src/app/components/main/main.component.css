@@ -6,3 +6,54 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+
+#form {
+  margin: 30px auto;
+  width: 60%;
+  text-align: center;
+  background-color: bisque;
+  padding: 20px 50px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.5);
+}
+
+#form-wrapper {
+  display: flex;
+  margin: auto;
+  gap: 10px;
+}
+
+#form-01 {
+  /* background-color: aqua; */
+  flex-basis: 40%;
+  text-align: left;
+  font-weight: bold;
+}
+
+#form-02 {
+  /* background-color: blueviolet; */
+  flex-basis: 60%;
+  text-align: left;
+  font-weight: bold;
+}
+
+#submit {
+  margin-top: 10px;
+  background-color: crimson;
+  color: white;
+  padding: 10px;
+  border: none;
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#submit:hover {
+  background-color: red;
+  color: wheat;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}

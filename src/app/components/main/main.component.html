@@ -2,55 +2,61 @@
   <div id="news-wrapper" [innerHTML]="loadNews()"></div>
 
   <div id="form">
-    <h3>Añade tu noticia</h3>
-    <div>
-      <label for="title">Título</label>
-      <input
-        id="title"
-        type="text"
-        placeholder="Aquí el Título de la noticia"
-        [(ngModel)]="newNews.title"
-      />
+    <h3>AÑADE UNA NOTICIA</h3>
+    <div id="form-wrapper">
+      <div id="form-01">
+        <div class="form-control">
+          <label for="title">Título</label>
+          <input
+            id="title"
+            type="text"
+            placeholder="Aquí el Título de la noticia"
+            [(ngModel)]="newNews.title"
+          />
+        </div>
+        <div class="form-control">
+          <label for="date">Fecha</label>
+          <input
+            id="date"
+            type="date"
+            placeholder="fecha"
+            [(ngModel)]="newNews.date"
+          />
+        </div>
+        <div class="form-control">
+          <label for="image">URL de la imagen</label>
+          <input
+            id="image"
+            type="text"
+            placeholder="Introduce una URL"
+            [(ngModel)]="newNews.image"
+          />
+        </div>
+        <div class="form-control">
+          <label for="image">Descripción de la imagen</label>
+          <input
+            id="image"
+            type="text"
+            placeholder="Describe la imagen"
+            [(ngModel)]="newNews.alt"
+          />
+        </div>
+      </div>
+      <div id="form-02">
+        <div class="form-control">
+          <label for="content">Contenido</label>
+          <textarea
+            id="content"
+            type="text"
+            rows="10"
+            cols="40"
+            placeholder="Aquí el contenido de tu noticia. Por favor, sé breve"
+            required
+            [(ngModel)]="newNews.content"
+          ></textarea>
+        </div>
+      </div>
     </div>
-    <div>
-      <label for="date">Fecha</label>
-      <input
-        id="date"
-        type="date"
-        placeholder="fecha"
-        [(ngModel)]="newNews.date"
-      />
-    </div>
-    <div>
-      <label for="image">URL de la imagen</label>
-      <input
-        id="image"
-        type="text"
-        placeholder="Introduce una URL"
-        [(ngModel)]="newNews.image"
-      />
-    </div>
-    <div>
-      <label for="image">descripción de la imagen</label>
-      <input
-        id="image"
-        type="text"
-        placeholder="Describe la imagen"
-        [(ngModel)]="newNews.alt"
-      />
-    </div>
-    <div>
-      <label for="content">Contenido</label>
-      <textarea
-        id="content"
-        type="text"
-        rows="10"
-        cols="40"
-        placeholder="Aquí el contenido de tu noticia. Por favor, sé breve"
-        required
-        [(ngModel)]="newNews.content"
-      ></textarea>
-    </div>
-    <button (click)="saveNews()">Carga tu noticia</button>
+    <button id="submit" (click)="saveNews()">Carga tu noticia</button>
   </div>
 </div>

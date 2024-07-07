@@ -33,14 +33,25 @@ export class MainComponent {
   newNews: Inews = { title: '', date: '', image: '', alt: '', content: '' };
 
   saveNews() {
-    this.arrNews.push(this.newNews);
+    if (
+      this.newNews.alt !== '' &&
+      this.newNews.content !== '' &&
+      this.newNews.date !== '' &&
+      this.newNews.image !== '' &&
+      this.newNews.title !== ''
+    ) {
+      this.arrNews.push(this.newNews);
+    } else {
+      alert(
+        'Para poder añadir una noticia al blog, todos los campos deben ser diligenciados :)'
+      );
+    }
     this.newNews = { title: '', date: '', image: '', alt: '', content: '' };
     console.log(this.arrNews);
   }
 
   loadNews(): string {
-    let html: string = `
-`;
+    let html: string = ``;
     this.arrNews.forEach((news: Inews) => {
       html += `
       <div class="entry">
