@@ -30,6 +30,7 @@ export class MainComponent {
       content: `España y Alemania cruzaron sus caminos en los cuartos de final de la Euro 2024, con pronóstico reservado. Los anfitriones del torneo tenían una ligera ventaja, por tener el público a favor. Al final, los españoles apagaron la fiesta de los alemanes y los derrotaron 2-1 en tiempo extra. Sin embargo, ese partido quedó bajo la lupa de la crítica por una polémica jugada que hubiese cambiado por completo la historia. Sin embargo, la gran polémica del juego se desató en el primer tiempo extra. A los 105. Jamal Musiala sacó un potente remate de media distancia que iba directo a la portería de España. Ahí fue cuando se atravesó Marc Cucurella para desviar y el balón se terminó estrellando en una de sus manos, dentro del área. Una acción clara para decretar penal a favor de Alemania. La cuestión es que, el árbitro y el VAR pasaron de largo e ignoraron por completo la infracción.`,
     },
   ];
+
   newNews: Inews = { title: '', date: '', image: '', alt: '', content: '' };
 
   saveNews() {
@@ -41,12 +42,13 @@ export class MainComponent {
       this.newNews.title !== ''
     ) {
       this.arrNews.push(this.newNews);
+      this.newNews = { title: '', date: '', image: '', alt: '', content: '' };
     } else {
       alert(
         'Para poder añadir una noticia al blog, todos los campos deben ser diligenciados :)'
       );
     }
-    this.newNews = { title: '', date: '', image: '', alt: '', content: '' };
+
     console.log(this.arrNews);
   }
 
